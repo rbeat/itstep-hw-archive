@@ -1,0 +1,28 @@
+body {
+    background-image: url("img/background.png");
+    background-size: 100%;
+
+}
+
+i {
+    color: whitesmoke;
+
+}
+p {
+    text-align: right;
+    color: white;
+
+}
+div {
+    width: 600px;
+    background-color: rgba(110, 21, 0, 0.7);
+
+
+
+}
+h1 {
+    color: #f5f5f5;
+    text-align: center;
+    text-decoration: activeborder;
+
+}

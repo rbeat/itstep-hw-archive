@@ -1,0 +1,28 @@
+#div {
+    float: right ;
+    margin-top: 60px;
+    margin-right: 30px;
+
+    height: 612px;
+    width: 300px ;
+    border: 1px solid #aaaaaa;
+    text-align: center;
+    padding: 1px;
+}
+#div a{
+    text-align: center;
+
+}
+#div2 {
+    float: right ;
+    margin-top: 150px;
+    margin-right: 30px;
+    width:300px ;
+    height: 552px;
+
+
+}
+#s {
+    font-size: 24px;
+    font-weight: bold;
+}
