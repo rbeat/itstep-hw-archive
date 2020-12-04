@@ -1,0 +1,16 @@
+body {
+    background: #deb887;
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+
+}
+
+h1 {
+    background-color: white
+}
+
+
+.zig {
+   background-color: #dcdcdc;
+
+}
