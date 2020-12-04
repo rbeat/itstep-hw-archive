@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<style>html,body{height:100%;margin:0;padding:0;}td{width:100px;text-align:center;}.studentRow:hover{background-color:lightgrey;}#addGroupForm,#editStudentForm{display:none;position:absolute;top:45%;left:45%;background-color:lightgoldenrodyellow;text-align:center;}#editStudentForm{text-align:left;padding:10px;}#blackSquare{display:none;opacity:0.6;width:100%;height:100%;background-color:black;position:fixed;}#messageBox{width:250px;color:wheat;height:100px;border:2px solid black;border-radius:35px;position:fixed;left:38%;top:-2px;}#messageBox.errorMessage{background:#a90329;background:-moz-linear-gradient(top,#a90329 0%,#8f0222 44%,#6d0019 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#a90329),color-stop(44%,#8f0222),color-stop(100%,#6d0019));background:-webkit-linear-gradient(top,#a90329 0%,#8f0222 44%,#6d0019 100%);background:-o-linear-gradient(top,#a90329 0%,#8f0222 44%,#6d0019 100%);background:-ms-linear-gradient(top,#a90329 0%,#8f0222 44%,#6d0019 100%);background:linear-gradient(to bottom,#a90329 0%,#8f0222 44%,#6d0019 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a90329',endColorstr='#6d0019',GradientType=0);}#messageBox.successMessage{background:#b4ddb4;background:-moz-linear-gradient(top,#b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#b4ddb4),color-stop(17%,#83c783),color-stop(33%,#52b152),color-stop(67%,#008a00),color-stop(83%,#005700),color-stop(100%,#002400));background:-webkit-linear-gradient(top,#b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);background:-o-linear-gradient(top,#b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);background:-ms-linear-gradient(top,#b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);background:linear-gradient(to bottom,#b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4ddb4',endColorstr='#002400',GradientType=0);}#closeButton{color:black;float:right;margin-right:17px;margin-top:10px;border:1px solid black;padding-left:4px;padding-right:4px;font-family:Arial;font-weight:bold;background-color:lightgrey;cursor:pointer;display:block;}#message{margin-top:40px;text-align:center;font-style:italic;font-weight:bold;font-family:Helvetica;}</style>
+<script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+</head>
+<body>
+<div id="messageBox">
+<div id="closeButton" onclick="closeMessage()">X</div>
+<div id="message">Тестовое сообщение</div>
+</div>
+<div id="blackSquare"></div>
+<input type="text" id="firstName" placeholder="Type first name here" onkeyup="checkName('firstName')"/>
+<br>
+<input type="text" id="lastName" placeholder="Type last name here" onkeyup="checkName('lastName')"/>
+<br>
+<input type="text" id="age" placeholder="Type age here" onkeyup="checkAge()"/>
+<br>
+<select id="groupList"></select>
+<button onclick="showAddGroupForm()">Add Group</button>
+<button onclick="addStudent()">Add Student</button>
+<br>
+<br>
+<br>
+<div id="addGroupForm">
+<h4>Add Group</h4>
+<input id="groupNameInput" type="text" placeholder="Input group name">
+<br>
+<button onclick="addGroup()">Ok</button>
+</div>
+<div id="editStudentForm">
+<label>
+<input type="radio" id="deleteRadio"> Delete Student
+</label>
+<br>
+<label>
+<input type="radio" id="moveRadio"> Move Student to another group
+<select id="groupList2"></select>
+</label>
+<br>
+<button onclick="updateStudent()">Ok</button>
+<button onclick="hideStudentOptions()">Cancel</button>
+</div>
+<button onclick="deleteLast()">Delete last student</button>
+<table border="1" style="border-collapse: collapse" id="table">
+<tr>
+<td>First name</td>
+<td>Last name</td>
+<td>Age</td>
+</tr>
+</table>
+</body>
+</html>
+<script>
+    var messageBox = $("#messageBox");
+    messageBox.slideUp(0);
+    var groups = []; //массив групп студентов
+
+    var group1 = {name: 'Группа 1', students: []};  // 1 группа студентов
+    var group2 = {name: 'Группа 2', students: []};  // 2 группа студентов
+    groups.push(group1);        //добавяем группу в массив групп
+    groups.push(group2);        //добавяем группу в массив групп
+
+    refreshGroupList();
+
+    function showMessage(text, success) {
+        messageBox.removeClass("successMessage");
+        messageBox.removeClass("errorMessage");
+        $('#message').html(text);
+        if (success) {
+            messageBox.addClass("successMessage");
+        } else {
+            messageBox.addClass("errorMessage");
+        }
+        messageBox.slideDown(500)
+    }
+
+    function closeMessage() {
+        messageBox.slideUp(500)
+    }
+
+    function addStudent() {
+        if (validAge == true && validFirstName == true && validLastName == true) {
+            var s = document.getElementById("groupList");
+            var groupIndex = s.options[s.selectedIndex].value;
+            var firstNameField = document.getElementById("firstName");
+            var lastNameField = document.getElementById("lastName");
+            var age = document.getElementById("age");
+            var student = {firstName: firstNameField.value,
+                lastName: lastNameField.value,
+                age: age.value};
+            groups[groupIndex].students.push(student);
+            refreshTable();
+            showMessage("Студент добавлен успешно", true)
+        } else {
+            showMessage("Ошибка создания студента", false)
+        }
+    }
+
+    function refreshGroupList() {
+        var selectInnerHTML = '';
+        for (var i = 0; i < groups.length; i++) {
+            selectInnerHTML += '<option value=' + i + '>' + groups[i].name + '</option>\n'
+        }
+        document.getElementById("groupList").innerHTML = selectInnerHTML
+    }
+
+    function GroupList() {
+        var selectInnerHTML = '';
+        for (var i = 0; i < groups.length; i++) {
+            selectInnerHTML += '<option value=' + i + '>' + groups[i].name + '</option>\n'
+        }
+        document.getElementById("groupList2").innerHTML = selectInnerHTML
+    }
+
+    function refreshTable() {
+        var tableContent = '';
+        for (var i = 0; i < groups.length; i++) {
+            tableContent += '<tr><td>' + groups[i].name + '</td></tr>' +
+                    '<tr>' +
+                    '<td>First name</td>' +
+                    '<td>Last name</td>' +
+                    '<td>Age</td>' +
+                    '</tr>';
+
+            for (var j = 0; j < groups[i].students.length; j++) {
+                tableContent += '<tr class="studentRow" onclick="showStudentOptions(' + i + ', ' + j + ')">' +
+                        '<td>' + groups[i].students[j].firstName + '</td>' +
+                        '<td>' + groups[i].students[j].lastName + '</td>' +
+                        '<td>' + groups[i].students[j].age + '</td>' +
+                        '</tr>'
+            }
+        }
+
+        var table = document.getElementById("table");
+        table.innerHTML = tableContent;
+    }
+
+    function deleteLast() {
+        group.students.pop()
+        refreshTable()
+    }
+
+
+
+
+
+    function showAddGroupForm() {
+        var blackSquare = $("#blackSquare");
+        blackSquare.fadeOut();
+        blackSquare.css("display", "visible");
+        blackSquare.fadeIn(500);
+        setTimeout(function () {
+            $("#addGroupForm").css("display", "block");
+        }, 500);
+    }
+
+    function hideAddGroupForm() {
+        var blackSquare = $("#blackSquare");
+        $("#addGroupForm").css("display", "none");
+        blackSquare.fadeOut(100);
+    }
+
+    function addGroup() {
+        var groupName = $("#groupNameInput").val();
+        var newGroup = {name: groupName, students: []};
+        groups.push(newGroup);
+        hideAddGroupForm();
+        refreshGroupList();
+
+    }
+
+    var validFirstName = false;
+    var validLastName = false;
+    var validAge = false;
+
+    function checkAge() {
+        var input = document.getElementById("age");
+        var age = Number(input.value);
+        if (age > 0 && age < 150) {
+            input.style.border = "2px solid green";
+            validAge = true;
+        } else {
+            input.style.border = "2px solid red";
+            validAge = false;
+        }
+    }
+
+    function checkName(fieldName) {
+        var input = document.getElementById(fieldName);
+        var value = input.value;
+        if (value == "") {
+            input.style.border = "2px solid red"
+            if (fieldName == "firstName") {
+                validFirstName = false
+            } else {
+                validLastName = false
+            }
+        } else {
+            input.style.border = "2px solid green"
+            if (fieldName == "firstName") {
+                validFirstName = true
+            } else {
+                validLastName = true
+            }
+        }
+    }
+
+    var groupIndex, studentIndex;
+
+    function showStudentOptions(_groupIndex, _studentIndex) {
+        groupIndex = _groupIndex;
+        studentIndex = _studentIndex
+        var blackSquare = $("#blackSquare");
+        blackSquare.fadeOut();
+        blackSquare.css("display", "visible");
+        blackSquare.fadeIn(500);
+        setTimeout(function () {
+            $("#editStudentForm").css("display", "block");
+        }, 500);
+    }
+
+    function updateStudent() {
+        var length = groups[groupIndex].students.length;
+        if($('#deleteRadio').is(':checked')) {
+            for(var i = studentIndex; i < length; i++) {
+                groups[groupIndex].students[i] = groups[groupIndex].students[i+1]
+            }
+            groups[groupIndex].students.pop();
+            refreshTable();
+            showMessage("Студент удалён успешно", true)
+        }
+        else{
+            var Name = groups[groupIndex].students[StudentIndex].firstName;
+            var LastName = groups[groupIndex].students[StudentIndex].lastName;
+            var Age = groups[groupIndex].students[StudentIndex].age;
+            var firstNameField = Name;
+            var lastNameField = LastName;
+
+            var s = document.getElementById("groupList2");
+            var s1 = document.getElementById("groupList");
+            var groupIndex = s1.options[s1.selectedIndex].value;
+            var groupIndex2 = s.options[s.selectedIndex].value;
+            var student = {firstName: firstNameField.value,
+                lastName: lastNameField.value,
+                age: age.value};
+            for(var h = studentIndex; h < length; h++) {
+                groups[groupIndex].students[h] = groups[groupIndex].students[h+1]
+            }
+            groups[groupIndex].students.pop();
+            groups[groupIndex2].students.push(student);
+            refreshTable();
+            showMessage("Студент перемещен успешно", true)
+
+        }
+        var blackSquare = $("#blackSquare");
+        $("#editStudentForm").css("display", "none");
+        blackSquare.fadeOut(100);
+    }
+
+    function hideStudentOptions() {
+        var blackSquare = $("#blackSquare");
+        $("#editStudentForm").css("display", "none");
+        blackSquare.fadeOut(100);
+    }
+
+</script>

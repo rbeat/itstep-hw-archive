@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8"/>
+<script>
+        var number = Number(prompt("Введи число:"));
+        var result = 0;
+        var counter = 0;
+        var temp = number;
+
+        while(number != 0){
+            counter++;
+            number = Math.floor(number/10);
+        }
+
+        for(var i = (counter - 1); i >= 0; i--){
+            result = result + (temp%10) * Math.pow(10, i);
+            temp = Math.floor(temp/10);
+        }
+        alert(result);
+    </script>
+</head>
+<body>
+</body>
+</html>

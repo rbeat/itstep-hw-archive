@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8"/>
+<script>
+        var number = Number(prompt("Введи число:"));
+        var temp1 = 0;
+
+        function sumOfDigits(number) {
+            var sum = 0;
+            while (number != 0) {
+                sum += number % 10;
+                number = Math.floor(number / 10)
+            }
+
+            return sum
+
+
+        }
+
+
+        alert(sumOfDigits(number))
+    </script>
+</head>
+<body>
+</body>
+</html>
