@@ -1,0 +1,14 @@
+﻿Build started 13.12.2014 20:53:16.
+Project "c:\documents and settings\администратор\мои документы\visual studio 2010\Projects\pointerchalange\pointerchalange\pointerchalange.vcxproj" on node 2 (build target(s)).
+InitializeBuildStatus:
+  Touching "Debug\pointerchalange.unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt pointer.cpp
+  pointer.cpp
+c:\documents and settings\администратор\мои документы\visual studio 2010\projects\pointerchalange\pointerchalange\pointer.cpp(11): error C2440: 'initializing' : cannot convert from 'int (*)[10]' to 'int *'
+          Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+Done Building Project "c:\documents and settings\администратор\мои документы\visual studio 2010\Projects\pointerchalange\pointerchalange\pointerchalange.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.39
