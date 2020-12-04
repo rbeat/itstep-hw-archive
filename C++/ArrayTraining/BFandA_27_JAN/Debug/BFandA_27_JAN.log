@@ -1,0 +1,74 @@
+﻿  Source.cpp
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(25): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(25): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(26): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(26): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(37): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(37): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(38): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(38): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(40): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(40): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(48): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(48): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(50): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(50): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(60): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(60): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(62): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(62): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(74): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(74): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(76): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(76): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(79): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(79): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(72): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(98): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(113): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(113): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(120): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(120): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(122): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(122): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(115): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(145): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(145): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(146): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(146): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(147): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(147): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(163): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(163): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(164): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(164): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(165): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(165): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(196): error C2872: 'size': ambiguous symbol
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(20): note: could be 'int size'
+  c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(196): note: or       'size'
+c:\users\родион\itstep_archive\bfanda27jan\bfanda_27_jan\source.cpp(259): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data

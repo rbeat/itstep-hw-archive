@@ -1,0 +1,8 @@
+﻿  Akinator.cpp
+c:\users\родион\itstep_archive\akinator\akinator\akinator.cpp(16): error C2065: 'LLC_ALL': undeclared identifier
+c:\users\родион\itstep_archive\akinator\akinator\akinator.cpp(21): error C3861: 'guess': identifier not found
+c:\users\родион\itstep_archive\akinator\akinator\akinator.cpp(25): error C2059: syntax error: 'else'
+c:\users\родион\itstep_archive\akinator\akinator\akinator.cpp(38): error C2044: illegal continue
+c:\users\родион\itstep_archive\akinator\akinator\akinator.cpp(41): error C2044: illegal continue
+c:\users\родион\itstep_archive\akinator\akinator\akinator.cpp(45): error C2043: illegal break
+c:\users\родион\itstep_archive\akinator\akinator\akinator.cpp(48): error C2043: illegal break

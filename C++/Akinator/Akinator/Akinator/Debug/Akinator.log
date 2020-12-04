@@ -1,0 +1,21 @@
+﻿Build started 13.12.2014 19:38:24.
+Project "C:\Documents and Settings\Администратор\мои документы\visual studio 2010\Projects\Akinator\Akinator\Akinator.vcxproj" on node 2 (rebuild target(s)).
+_PrepareForClean:
+  Deleting file "Debug\Akinator.lastbuildstate".
+InitializeBuildStatus:
+  Touching "Debug\Akinator.unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Akinator.cpp
+  Akinator.cpp
+c:\documents and settings\администратор\мои документы\visual studio 2010\projects\akinator\akinator\akinator.cpp(8): error C2065: 'LLC_ALL' : undeclared identifier
+c:\documents and settings\администратор\мои документы\visual studio 2010\projects\akinator\akinator\akinator.cpp(13): error C3861: 'guess': identifier not found
+c:\documents and settings\администратор\мои документы\visual studio 2010\projects\akinator\akinator\akinator.cpp(17): error C2059: syntax error : 'else'
+c:\documents and settings\администратор\мои документы\visual studio 2010\projects\akinator\akinator\akinator.cpp(30): error C2044: illegal continue
+c:\documents and settings\администратор\мои документы\visual studio 2010\projects\akinator\akinator\akinator.cpp(33): error C2044: illegal continue
+c:\documents and settings\администратор\мои документы\visual studio 2010\projects\akinator\akinator\akinator.cpp(37): error C2043: illegal break
+c:\documents and settings\администратор\мои документы\visual studio 2010\projects\akinator\akinator\akinator.cpp(40): error C2043: illegal break
+Done Building Project "C:\Documents and Settings\Администратор\мои документы\visual studio 2010\Projects\Akinator\Akinator\Akinator.vcxproj" (rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.76
